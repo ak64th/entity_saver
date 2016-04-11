@@ -1,0 +1,27 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+__pycache__
+
+#idea
+/.idea
+
+#env
+/env
+
+#uwsgi
+/uwsgi.log
+/uwsgi.pid
+/uwsgi.ini
+
+#local files
+*.bak
+*.orig
+/config.py
+*.db
+
+/web
+/data
