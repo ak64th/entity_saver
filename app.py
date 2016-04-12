@@ -1,10 +1,10 @@
 import datetime
 import logging
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_peewee.db import Database
-from flask_peewee.utils import get_dictionary_from_model
 from config import Configuration
 from peewee import *
+import simplejson as json
 
 app = Flask(__name__)
 app.config.from_object(Configuration)
@@ -26,8 +26,9 @@ Entry.create_table(fail_silently=True)
 def index():
     data = request.get_json(force=True)
     app.logger.debug(data)
-    entry = Entry.create(form=data['form'], form_name=data['form_name'], entry=data['entry'])
-    return jsonify(get_dictionary_from_model(entry))
+    Entry.create(form=data['form'], form_name=data['form_name'], entry=json.dumps(data['entry']))
+    return 'ok'
+
 
 if __name__ == '__main__':
     logger = logging.getLogger('peewee')
