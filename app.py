@@ -22,7 +22,7 @@ class Entry(db.Model):
 Entry.create_table(fail_silently=True)
 
 
-@app.route('/api/entity/', methods=['POST'])
+@app.route('/jingshuju/api/entity/', methods=['POST'])
 def index():
     data = request.get_json(force=True)
     app.logger.debug(data)
