@@ -1,0 +1,8 @@
+class Configuration(object):
+    DATABASE = {
+        'name': 'entity.db',
+        'engine': 'peewee.SqliteDatabase',
+        'threadlocals': True,
+    }
+    DEBUG = True
+    SECRET_KEY = 'xxxxxx'
