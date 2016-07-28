@@ -1,7 +1,11 @@
 class Configuration(object):
     DATABASE = {
-        'name': 'entity.db',
-        'engine': 'peewee.SqliteDatabase',
+        'name': 'jinshuju_pro',
+        'engine': 'peewee.MySQLDatabase',
+        'host': 'rm-bp1a6ixj4o2986hp5.mysql.rds.aliyuncs.com',
+        'port': 3306,
+        'user': 'jinshuju',
+        'passwd': 'Focus001',
         'threadlocals': True,
     }
     DEBUG = True

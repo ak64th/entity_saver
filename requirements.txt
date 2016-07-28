@@ -2,3 +2,4 @@ Flask==0.10.1
 peewee==2.8.0
 flask-peewee==0.6.7
 simplejson==3.8.2
+pymysql==0.7.5
